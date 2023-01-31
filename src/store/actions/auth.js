@@ -45,12 +45,12 @@ export const auth = (email, password, isSignup) => {
         dispatch(authStart());
         const authData = {
             email: email,
-            password: password,
+            password: password, 
             returnSecureToken: true
         };
-        let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCXAJV5sSCaOg-WBzhP69McxCNZbAWzSZU';
+        let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyA_UrMw6vc30ld7tGeIcK3F6RQ5x3hWhqI';
         if (!isSignup) {
-            url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCXAJV5sSCaOg-WBzhP69McxCNZbAWzSZU';
+            url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyA_UrMw6vc30ld7tGeIcK3F6RQ5x3hWhqI';
         }
         axios.post(url, authData)
             .then(response => {

@@ -11,6 +11,8 @@
     width: 100%;
     box-sizing: border-box;
     display: block;
+    margin-right: 10px;
+
 }
 
 .NavigationItem a:hover,
